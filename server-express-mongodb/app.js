@@ -5,6 +5,9 @@ var logger = require("morgan");
 var cors = require("cors");
 var mongoose = require("mongoose");
 
+//added by victor
+var ejs = require("ejs");
+
 var tasksRouter = require("./routes/tasks");
 
 var app = express();
@@ -15,6 +18,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 app.use(cors());
+
+//added by victor 
+app.set("view engine", "ejs");
 
 app.use("/tasks", tasksRouter);
 
