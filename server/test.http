@@ -1,0 +1,19 @@
+POST http://localhost:4000/admin/products
+Content-Type: application/json
+
+{
+  "category": "Handheld Tools",
+  "toolName": "Pointed Spade - Garden",
+  "quantity": 8,
+  "description": "True Value, ash handle, heavy duty"
+}
+
+###
+
+GET http://localhost:4000/admin/products
+Content-Type: application/json
+
+###
+
+GET http://localhost:4000/admin/products/605e7bd715c95307ec2be5f4
+Content-Type: application/json
