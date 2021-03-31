@@ -26,7 +26,7 @@ app.use("/tasks", tasksRouter);
 
 //var mongoDB = "mongodb://127.0.0.1/database";
 var mongoDB =
-  "mongodb+srv://ammon:Password1%21@cluster0-lhvh5.mongodb.net/test?retryWrites=true&w=majority";
+  "mongodb+srv://Cats:Hardware1234@cluster0.ffgh5.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 mongoose.connect(mongoDB, { useNewUrlParser: true });
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
