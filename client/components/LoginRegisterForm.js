@@ -5,8 +5,8 @@ const LoginRegisterForm = ({
   setEmail,
   pass,
   setPass,
-  handleSubmit,
   buttonName,
+  handleSubmit,
 }) => (
   <div className="col-md-6">
     <div className="form-group">

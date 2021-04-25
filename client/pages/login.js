@@ -17,17 +17,17 @@ const Login = () => {
 
   const register = async () => {
     //console.log(registerEmail, registerPass)
-    setLoading(true)
+    setLoading(false)
     await firebase
       .auth()
       .createUserWithEmailAndPassword(registerEmail, registerPass)
       .then((user) => {
         console.log("REGISTER", user);
-        router.push("/");
+        toast.success("User Successfully Registered!")
       })
       .catch((err) => {
         console.log(err);
-        toast(err.message);
+        toast.error(err.message);
         setLoading(false)
       });
   };
@@ -40,11 +40,12 @@ const Login = () => {
       .signInWithEmailAndPassword(loginEmail, loginPass)
       .then((user) => {
         console.log("LOGIN", user);
+        toast.success("User Successfully Logged In!")
         router.push("/");
       })
       .catch((err) => {
         console.log(err);
-        toast(err.message);
+        toast.error(err.message);
         setLoading(false)
       });
   };
@@ -57,7 +58,7 @@ const Login = () => {
       })
       .catch((err) => {
         console.log(err);
-        toast(err.message);
+        toast.error(err.message);
       });
   };
 
@@ -65,7 +66,8 @@ const Login = () => {
     <div className="container">
       <h2 className="text-center pt-4 display-4">Welcome to the Hardware Inventory App!</h2>
       <hr></hr>
-      <h3 className="text-center pt-8 display-6">{loading ? <SyncOutlined spin /> : "Please Login / Register"}</h3>
+      <h3 className="text-center pt-8 display-6">
+        {loading ? (<SyncOutlined spin className="text-home-made" />) : ("Please Login / Register")}</h3>
 
       <Button
         onClick={googleLogin}
@@ -100,7 +102,7 @@ const Login = () => {
       </div>
 
       <div className="d-flex">
-        <Link href="/reset/password">
+        <Link href="/reset-password">
           <a className="btn btn-outline-danger btn-sm mt-5">Reset Password</a>
         </Link>
       </div>

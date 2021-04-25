@@ -1,0 +1,1 @@
+{"ast":null,"code":"import Products from '../components/';","map":{"version":3,"sources":["C:/Users/Jacob/Desktop/hardware-inventory/client/pages/inventory/products.js"],"names":["Products"],"mappings":"AAAA,OAAOA,QAAP,MAAqB,gBAArB","sourcesContent":["import Products from '../components/'"]},"metadata":{},"sourceType":"module"}

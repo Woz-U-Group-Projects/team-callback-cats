@@ -29,7 +29,7 @@ const PasswordReset = () => {
             handleCodeInApp: true,
         };
 
-        await firebase.auth().sendPasswordResetEmail(email, config)
+        firebase.auth().sendPasswordResetEmail(email, config)
             .then(() => {
                 setEmail('')
                 setLoading(false)

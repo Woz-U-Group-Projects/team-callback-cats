@@ -23,8 +23,12 @@ const Nav = () => {
         <a className="nav-link">Home</a>
       </Link>
 
-      <Link href={user ? "/inventory" : "/login"}>
+      <Link href={user ? "/inventory/inventory-list" : "/login"}>
         <a className="nav-link">Inventory</a>
+      </Link>
+
+      <Link href={user ? "/inventory/products" : "/login"}>
+        <a className="nav-link">Products</a>
       </Link>
 
       {user ? (

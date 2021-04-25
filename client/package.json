@@ -16,6 +16,8 @@
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
     "firebase": "^8.4.1",
+    "font-awesome": "^4.7.0",
+    "FortAwesome/Font-Awesome": "*",
     "next": "^10.1.3",
     "nookies": "^2.5.2",
     "react": "^17.0.2",
